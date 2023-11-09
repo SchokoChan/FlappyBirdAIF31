@@ -1,0 +1,9 @@
+1: Es konnte keine Verbindung zur Datenbank aufgebaut werden!
+2: Benutzername ist bereits vergeben(Tritt auf bei Registierung).
+3: Unbekannter Fehler beim Hashen vom Passwort.
+4: Falsche Anzahl von Beeinflussten Datensätzen.
+5: Benutzername konnte nicht gefunden werden in der Datenbank(Beim Anmelden).
+6: Hash Passwort oder Salt wurden nicht beim Login aus der Datenbank erfolgreich Ausgelesen.
+50: Fehler beim Ausführen eines MySQL Commands.
+100: Passwort Länge muss mindestents 8 Zeichen betragen!
+200: Zu viele Benutzer mit dem selben benutzernamen in der Datenbank!

@@ -114,6 +114,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormAnmeldeFormular";
             Text = "Login";
+            Load += FormAnmeldeFormular_Load;
             ((System.ComponentModel.ISupportInitialize)errorProvider).EndInit();
             ResumeLayout(false);
             PerformLayout();

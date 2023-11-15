@@ -1,0 +1,21 @@
+CREATE USER 'FlappyBirdRead'@'localhost' IDENTIFIED BY 'p0P8NRr9zOnU6chp';
+CREATE USER 'FlappyBirdAll'@'localhost' IDENTIFIED BY 'rT$9aB6p#7Lx2NqZ3V$5yF8tR1GwU0sP';
+
+drop database FlappyBird;
+
+create database FlappyBird;
+
+GRANT SELECT ON FlappyBird.* TO 'FlappyBirdRead'@'localhost';
+GRANT ALL PRIVILEGES ON FlappyBird.* TO 'FlappyBirdAll'@'localhost';
+
+use FlappyBird;
+
+create table User(
+ID_User int not null auto_increment,
+Username VarChar(25),
+PasswortHash VarChar(255),
+PasswortSalt VarChar(8),
+Highscore int,
+Coins int,
+Primary Key(ID_User));
+

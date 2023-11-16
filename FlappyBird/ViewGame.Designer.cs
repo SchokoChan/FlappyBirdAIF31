@@ -28,92 +28,115 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pannelBoxRoehre1 = new System.Windows.Forms.PictureBox();
-            this.pannelBoxRoehre2 = new System.Windows.Forms.PictureBox();
-            this.pannelBoxRoehre3 = new System.Windows.Forms.PictureBox();
-            this.pannelBoxRoehre4 = new System.Windows.Forms.PictureBox();
-            this.pannelBoxVogel = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pannelBoxVogel)).BeginInit();
-            this.SuspendLayout();
+            pannelBoxRoehre1 = new PictureBox();
+            pannelBoxRoehre2 = new PictureBox();
+            pannelBoxRoehre3 = new PictureBox();
+            pannelBoxRoehre4 = new PictureBox();
+            pannelBoxVogel = new PictureBox();
+            panelRoehre1 = new Panel();
+            panelRoehre2 = new Panel();
+            ((System.ComponentModel.ISupportInitialize)pannelBoxRoehre1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pannelBoxRoehre2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pannelBoxRoehre3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pannelBoxRoehre4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pannelBoxVogel).BeginInit();
+            panelRoehre1.SuspendLayout();
+            panelRoehre2.SuspendLayout();
+            SuspendLayout();
             // 
             // pannelBoxRoehre1
             // 
-            this.pannelBoxRoehre1.BackColor = System.Drawing.Color.Transparent;
-            this.pannelBoxRoehre1.Image = global::FlappyBird.Properties.Resources.Roehre1;
-            this.pannelBoxRoehre1.Location = new System.Drawing.Point(687, 585);
-            this.pannelBoxRoehre1.Name = "pannelBoxRoehre1";
-            this.pannelBoxRoehre1.Size = new System.Drawing.Size(119, 353);
-            this.pannelBoxRoehre1.TabIndex = 0;
-            this.pannelBoxRoehre1.TabStop = false;
-            this.pannelBoxRoehre1.Click += new System.EventHandler(this.pannelBoxRoehre1_Click);
+            pannelBoxRoehre1.BackColor = Color.Transparent;
+            pannelBoxRoehre1.Image = Properties.Resources.Roehre1;
+            pannelBoxRoehre1.Location = new Point(1, 596);
+            pannelBoxRoehre1.Name = "pannelBoxRoehre1";
+            pannelBoxRoehre1.Size = new Size(119, 353);
+            pannelBoxRoehre1.TabIndex = 0;
+            pannelBoxRoehre1.TabStop = false;
+            pannelBoxRoehre1.Click += pannelBoxRoehre1_Click;
             // 
             // pannelBoxRoehre2
             // 
-            this.pannelBoxRoehre2.BackColor = System.Drawing.Color.Transparent;
-            this.pannelBoxRoehre2.Image = global::FlappyBird.Properties.Resources.Roehre1;
-            this.pannelBoxRoehre2.Location = new System.Drawing.Point(26, 585);
-            this.pannelBoxRoehre2.Name = "pannelBoxRoehre2";
-            this.pannelBoxRoehre2.Size = new System.Drawing.Size(120, 353);
-            this.pannelBoxRoehre2.TabIndex = 1;
-            this.pannelBoxRoehre2.TabStop = false;
-            this.pannelBoxRoehre2.Click += new System.EventHandler(this.pannelBoxRoehre2_Click);
+            pannelBoxRoehre2.BackColor = Color.Transparent;
+            pannelBoxRoehre2.Image = Properties.Resources.Roehre1;
+            pannelBoxRoehre2.Location = new Point(-3, 585);
+            pannelBoxRoehre2.Name = "pannelBoxRoehre2";
+            pannelBoxRoehre2.Size = new Size(120, 353);
+            pannelBoxRoehre2.TabIndex = 1;
+            pannelBoxRoehre2.TabStop = false;
+            pannelBoxRoehre2.Click += pannelBoxRoehre2_Click;
             // 
             // pannelBoxRoehre3
             // 
-            this.pannelBoxRoehre3.BackColor = System.Drawing.Color.Transparent;
-            this.pannelBoxRoehre3.Image = global::FlappyBird.Properties.Resources.RoehreGedreht;
-            this.pannelBoxRoehre3.Location = new System.Drawing.Point(686, -256);
-            this.pannelBoxRoehre3.Name = "pannelBoxRoehre3";
-            this.pannelBoxRoehre3.Size = new System.Drawing.Size(120, 598);
-            this.pannelBoxRoehre3.TabIndex = 3;
-            this.pannelBoxRoehre3.TabStop = false;
-            this.pannelBoxRoehre3.Click += new System.EventHandler(this.pannelBoxRoehre3_Click);
+            pannelBoxRoehre3.BackColor = Color.Transparent;
+            pannelBoxRoehre3.Image = Properties.Resources.RoehreGedreht;
+            pannelBoxRoehre3.Location = new Point(0, -264);
+            pannelBoxRoehre3.Name = "pannelBoxRoehre3";
+            pannelBoxRoehre3.Size = new Size(120, 598);
+            pannelBoxRoehre3.TabIndex = 3;
+            pannelBoxRoehre3.TabStop = false;
+            pannelBoxRoehre3.Click += pannelBoxRoehre3_Click;
             // 
             // pannelBoxRoehre4
             // 
-            this.pannelBoxRoehre4.BackColor = System.Drawing.Color.Transparent;
-            this.pannelBoxRoehre4.Image = global::FlappyBird.Properties.Resources.RoehreGedreht;
-            this.pannelBoxRoehre4.Location = new System.Drawing.Point(26, -256);
-            this.pannelBoxRoehre4.Name = "pannelBoxRoehre4";
-            this.pannelBoxRoehre4.Size = new System.Drawing.Size(120, 598);
-            this.pannelBoxRoehre4.TabIndex = 4;
-            this.pannelBoxRoehre4.TabStop = false;
+            pannelBoxRoehre4.BackColor = Color.Transparent;
+            pannelBoxRoehre4.Image = Properties.Resources.RoehreGedreht;
+            pannelBoxRoehre4.Location = new Point(-3, -221);
+            pannelBoxRoehre4.Name = "pannelBoxRoehre4";
+            pannelBoxRoehre4.Size = new Size(120, 598);
+            pannelBoxRoehre4.TabIndex = 4;
+            pannelBoxRoehre4.TabStop = false;
             // 
             // pannelBoxVogel
             // 
-            this.pannelBoxVogel.BackColor = System.Drawing.Color.Transparent;
-            this.pannelBoxVogel.Image = global::FlappyBird.Properties.Resources.vogel_icon;
-            this.pannelBoxVogel.Location = new System.Drawing.Point(317, 374);
-            this.pannelBoxVogel.Name = "pannelBoxVogel";
-            this.pannelBoxVogel.Size = new System.Drawing.Size(100, 75);
-            this.pannelBoxVogel.TabIndex = 5;
-            this.pannelBoxVogel.TabStop = false;
+            pannelBoxVogel.BackColor = Color.Transparent;
+            pannelBoxVogel.Image = Properties.Resources.vogel_icon;
+            pannelBoxVogel.Location = new Point(144, 454);
+            pannelBoxVogel.Name = "pannelBoxVogel";
+            pannelBoxVogel.Size = new Size(100, 75);
+            pannelBoxVogel.TabIndex = 5;
+            pannelBoxVogel.TabStop = false;
+            // 
+            // panelRoehre1
+            // 
+            panelRoehre1.BackColor = Color.Transparent;
+            panelRoehre1.Controls.Add(pannelBoxRoehre4);
+            panelRoehre1.Controls.Add(pannelBoxRoehre2);
+            panelRoehre1.Location = new Point(423, 0);
+            panelRoehre1.Name = "panelRoehre1";
+            panelRoehre1.Size = new Size(120, 1024);
+            panelRoehre1.TabIndex = 6;
+            // 
+            // panelRoehre2
+            // 
+            panelRoehre2.BackColor = Color.Transparent;
+            panelRoehre2.Controls.Add(pannelBoxRoehre3);
+            panelRoehre2.Controls.Add(pannelBoxRoehre1);
+            panelRoehre2.Location = new Point(718, 0);
+            panelRoehre2.Name = "panelRoehre2";
+            panelRoehre2.Size = new Size(120, 1024);
+            panelRoehre2.TabIndex = 7;
             // 
             // ViewGame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::FlappyBird.Properties.Resources.Hintergrund;
-            this.ClientSize = new System.Drawing.Size(850, 1024);
-            this.Controls.Add(this.pannelBoxVogel);
-            this.Controls.Add(this.pannelBoxRoehre4);
-            this.Controls.Add(this.pannelBoxRoehre3);
-            this.Controls.Add(this.pannelBoxRoehre2);
-            this.Controls.Add(this.pannelBoxRoehre1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ViewGame";
-            this.Text = "ViewGame";
-            ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pannelBoxVogel)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.Hintergrund;
+            ClientSize = new Size(850, 1024);
+            Controls.Add(panelRoehre2);
+            Controls.Add(pannelBoxVogel);
+            Controls.Add(panelRoehre1);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "ViewGame";
+            Text = "ViewGame";
+            ((System.ComponentModel.ISupportInitialize)pannelBoxRoehre1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pannelBoxRoehre2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pannelBoxRoehre3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pannelBoxRoehre4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pannelBoxVogel).EndInit();
+            panelRoehre1.ResumeLayout(false);
+            panelRoehre2.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion
@@ -123,5 +146,7 @@
         private PictureBox pannelBoxRoehre3;
         private PictureBox pannelBoxRoehre4;
         private PictureBox pannelBoxVogel;
+        private Panel panelRoehre1;
+        private Panel panelRoehre2;
     }
 }

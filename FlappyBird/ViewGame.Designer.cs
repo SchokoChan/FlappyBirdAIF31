@@ -43,7 +43,7 @@
             // pannelBoxRoehre1
             // 
             this.pannelBoxRoehre1.BackColor = System.Drawing.Color.Transparent;
-            this.pannelBoxRoehre1.Image = global::FlappyBird.Properties.Resources.Roehre;
+            this.pannelBoxRoehre1.Image = global::FlappyBird.Properties.Resources.Roehre1;
             this.pannelBoxRoehre1.Location = new System.Drawing.Point(687, 585);
             this.pannelBoxRoehre1.Name = "pannelBoxRoehre1";
             this.pannelBoxRoehre1.Size = new System.Drawing.Size(119, 353);
@@ -54,17 +54,18 @@
             // pannelBoxRoehre2
             // 
             this.pannelBoxRoehre2.BackColor = System.Drawing.Color.Transparent;
-            this.pannelBoxRoehre2.Image = global::FlappyBird.Properties.Resources.Roehre;
+            this.pannelBoxRoehre2.Image = global::FlappyBird.Properties.Resources.Roehre1;
             this.pannelBoxRoehre2.Location = new System.Drawing.Point(26, 585);
             this.pannelBoxRoehre2.Name = "pannelBoxRoehre2";
             this.pannelBoxRoehre2.Size = new System.Drawing.Size(120, 353);
             this.pannelBoxRoehre2.TabIndex = 1;
             this.pannelBoxRoehre2.TabStop = false;
+            this.pannelBoxRoehre2.Click += new System.EventHandler(this.pannelBoxRoehre2_Click);
             // 
             // pannelBoxRoehre3
             // 
             this.pannelBoxRoehre3.BackColor = System.Drawing.Color.Transparent;
-            this.pannelBoxRoehre3.Image = global::FlappyBird.Properties.Resources.Roehre_gedreht;
+            this.pannelBoxRoehre3.Image = global::FlappyBird.Properties.Resources.RoehreGedreht;
             this.pannelBoxRoehre3.Location = new System.Drawing.Point(686, -256);
             this.pannelBoxRoehre3.Name = "pannelBoxRoehre3";
             this.pannelBoxRoehre3.Size = new System.Drawing.Size(120, 598);
@@ -75,7 +76,7 @@
             // pannelBoxRoehre4
             // 
             this.pannelBoxRoehre4.BackColor = System.Drawing.Color.Transparent;
-            this.pannelBoxRoehre4.Image = global::FlappyBird.Properties.Resources.Roehre_gedreht;
+            this.pannelBoxRoehre4.Image = global::FlappyBird.Properties.Resources.RoehreGedreht;
             this.pannelBoxRoehre4.Location = new System.Drawing.Point(26, -256);
             this.pannelBoxRoehre4.Name = "pannelBoxRoehre4";
             this.pannelBoxRoehre4.Size = new System.Drawing.Size(120, 598);

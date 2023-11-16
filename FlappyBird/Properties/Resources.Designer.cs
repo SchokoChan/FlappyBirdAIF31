@@ -93,6 +93,26 @@ namespace FlappyBird.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Roehre1 {
+            get {
+                object obj = ResourceManager.GetObject("Roehre1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RoehreGedreht {
+            get {
+                object obj = ResourceManager.GetObject("RoehreGedreht", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap vogel_icon {
             get {
                 object obj = ResourceManager.GetObject("vogel_icon", resourceCulture);

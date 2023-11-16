@@ -26,5 +26,10 @@ namespace FlappyBird
         {
 
         }
+
+        private void pannelBoxRoehre2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

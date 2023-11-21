@@ -31,5 +31,30 @@ namespace FlappyBird
         {
 
         }
+
+        private void pannelBoxVogel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ViewGame_Load(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void ViewGame_Click(object sender, EventArgs e)
+        {
+            pannelBoxVogel.Location = new Point(pannelBoxVogel.Location.X, pannelBoxVogel.Location.Y-50);
+        }
+
+        private void ViewGame_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyValue == ' ')
+            {
+
+                pannelBoxVogel.Location = new Point(pannelBoxVogel.Location.X, pannelBoxVogel.Location.Y - 50);
+            }
+        }
     }
 }

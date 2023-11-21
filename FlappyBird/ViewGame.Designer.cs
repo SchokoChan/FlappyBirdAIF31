@@ -48,7 +48,7 @@
             // 
             this.pannelBoxRoehre1.BackColor = System.Drawing.Color.Transparent;
             this.pannelBoxRoehre1.Image = global::FlappyBird.Properties.Resources.Roehre1;
-            this.pannelBoxRoehre1.Location = new System.Drawing.Point(1, 596);
+            this.pannelBoxRoehre1.Location = new System.Drawing.Point(-3, 609);
             this.pannelBoxRoehre1.Name = "pannelBoxRoehre1";
             this.pannelBoxRoehre1.Size = new System.Drawing.Size(119, 353);
             this.pannelBoxRoehre1.TabIndex = 0;
@@ -58,7 +58,7 @@
             // 
             this.pannelBoxRoehre2.BackColor = System.Drawing.Color.Transparent;
             this.pannelBoxRoehre2.Image = global::FlappyBird.Properties.Resources.Roehre1;
-            this.pannelBoxRoehre2.Location = new System.Drawing.Point(-3, 596);
+            this.pannelBoxRoehre2.Location = new System.Drawing.Point(-3, 609);
             this.pannelBoxRoehre2.Name = "pannelBoxRoehre2";
             this.pannelBoxRoehre2.Size = new System.Drawing.Size(120, 353);
             this.pannelBoxRoehre2.TabIndex = 1;
@@ -93,6 +93,7 @@
             this.pannelBoxVogel.Size = new System.Drawing.Size(100, 75);
             this.pannelBoxVogel.TabIndex = 5;
             this.pannelBoxVogel.TabStop = false;
+            this.pannelBoxVogel.Click += new System.EventHandler(this.pannelBoxVogel_Click);
             // 
             // panelRoehre1
             // 
@@ -101,7 +102,7 @@
             this.panelRoehre1.Controls.Add(this.pannelBoxRoehre2);
             this.panelRoehre1.Location = new System.Drawing.Point(453, 0);
             this.panelRoehre1.Name = "panelRoehre1";
-            this.panelRoehre1.Size = new System.Drawing.Size(120, 1024);
+            this.panelRoehre1.Size = new System.Drawing.Size(120, 934);
             this.panelRoehre1.TabIndex = 6;
             // 
             // panelRoehre2
@@ -111,7 +112,7 @@
             this.panelRoehre2.Controls.Add(this.pannelBoxRoehre1);
             this.panelRoehre2.Location = new System.Drawing.Point(718, 0);
             this.panelRoehre2.Name = "panelRoehre2";
-            this.panelRoehre2.Size = new System.Drawing.Size(120, 1024);
+            this.panelRoehre2.Size = new System.Drawing.Size(120, 934);
             this.panelRoehre2.TabIndex = 7;
             // 
             // ViewGame
@@ -126,6 +127,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewGame";
             this.Text = "ViewGame";
+            this.Load += new System.EventHandler(this.ViewGame_Load);
+            this.Click += new System.EventHandler(this.ViewGame_Click);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ViewGame_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre3)).EndInit();

@@ -19,3 +19,5 @@ Highscore int,
 Coins int,
 Primary Key(ID_User));
 
+
+INSERT INTO User VALUES(NULL,'Admin','XxsXVJmqArfCEO7sXKPtDptZ0xo02fUkw5rCeqhYcN4=','cys2v1yP',0,0);

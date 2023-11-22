@@ -93,7 +93,6 @@
             this.pannelBoxVogel.Size = new System.Drawing.Size(100, 75);
             this.pannelBoxVogel.TabIndex = 5;
             this.pannelBoxVogel.TabStop = false;
-            this.pannelBoxVogel.Click += new System.EventHandler(this.pannelBoxVogel_Click);
             // 
             // panelRoehre1
             // 

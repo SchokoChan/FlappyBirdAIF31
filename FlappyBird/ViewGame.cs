@@ -17,26 +17,6 @@ namespace FlappyBird
             InitializeComponent();
         }
 
-        private void pannelBoxRoehre1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pannelBoxRoehre3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pannelBoxRoehre2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pannelBoxVogel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ViewGame_Load(object sender, EventArgs e)
         {
             

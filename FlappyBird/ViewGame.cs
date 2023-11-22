@@ -15,6 +15,8 @@ namespace FlappyBird
         public ViewGame()
         {
             InitializeComponent();
+            Thread vogelThread = new Thread(vogelMethode) ;
+            vogelThread.Start();
         }
 
         private void ViewGame_Load(object sender, EventArgs e)
@@ -36,5 +38,43 @@ namespace FlappyBird
                 pannelBoxVogel.Location = new Point(pannelBoxVogel.Location.X, pannelBoxVogel.Location.Y - 50);
             }
         }
+
+        private void vogelMethode()
+        {
+            while (true)
+            {
+                int fallenAbschlussCode = vogelFallen();
+                if(fallenAbschlussCode == 0)
+                {
+                    //gut
+                }
+                else
+                {
+                    //nicht gut
+                }
+                Thread.Sleep(10);
+                
+            }
+
+        }
+
+
+        private int vogelFallen()
+        {
+            PictureBox vogel = pannelBoxVogel;
+            if (vogel.InvokeRequired)
+            {
+                vogel.Invoke(new Action(() => {
+                    vogel.Location = new Point(vogel.Location.X, vogel.Location.Y + 5);
+                }));
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
+
+        }
+
     }
 }

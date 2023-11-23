@@ -66,7 +66,10 @@ namespace FlappyBird
         private int vogelFallen()
         {
             PictureBox vogel = pannelBoxVogel;
-            
+            //if(vogel.Location.Y = 936)
+            //{
+            //    ControllerGame.spielerLebt == false
+            //}
             if(ControllerGame.spielerLebt == true) 
             {
                 if (vogel.InvokeRequired)

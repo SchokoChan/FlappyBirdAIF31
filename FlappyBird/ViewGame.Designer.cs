@@ -35,6 +35,7 @@
             this.pannelBoxVogel = new System.Windows.Forms.PictureBox();
             this.panelRoehre1 = new System.Windows.Forms.Panel();
             this.panelRoehre2 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre3)).BeginInit();
@@ -114,12 +115,20 @@
             this.panelRoehre2.Size = new System.Drawing.Size(120, 934);
             this.panelRoehre2.TabIndex = 7;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(3, 939);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(148, 23);
+            this.textBox1.TabIndex = 8;
+            // 
             // ViewGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FlappyBird.Properties.Resources.Hintergrund;
             this.ClientSize = new System.Drawing.Size(850, 1024);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panelRoehre2);
             this.Controls.Add(this.pannelBoxVogel);
             this.Controls.Add(this.panelRoehre1);
@@ -137,6 +146,7 @@
             this.panelRoehre1.ResumeLayout(false);
             this.panelRoehre2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -149,5 +159,6 @@
         private PictureBox pannelBoxVogel;
         private Panel panelRoehre1;
         private Panel panelRoehre2;
+        private TextBox textBox1;
     }
 }

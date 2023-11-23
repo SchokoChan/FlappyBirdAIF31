@@ -83,7 +83,7 @@ namespace FlappyBird
                 {
                     vogel.Invoke(new Action(() =>
                     {
-                        if (vogel.Location.Y == 939)
+                        if (vogel.Location.Y >= 862)
                         {
                             ControllerGame.spielerLebt = false;
                         }

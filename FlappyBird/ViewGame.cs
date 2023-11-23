@@ -15,53 +15,61 @@ namespace FlappyBird
         public ViewGame()
         {
             InitializeComponent();
-            Thread vogelThread = new Thread(vogelMethode) ;
-            Thread hindernissThread = new Thread(hindernissMethode);
-            vogelThread.Start();
-            hindernissThread.Start();
+            Thread externalThread = new Thread(externalMethode);
+            externalThread.Start();
 
         }
 
         private void ViewGame_Load(object sender, EventArgs e)
         {
-            
+
 
         }
 
         private void ViewGame_Click(object sender, EventArgs e)
         {
-            pannelBoxVogel.Location = new Point(pannelBoxVogel.Location.X, pannelBoxVogel.Location.Y-50);
+            pannelBoxVogel.Location = new Point(pannelBoxVogel.Location.X, pannelBoxVogel.Location.Y - 75);
         }
 
         private void ViewGame_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyValue == ' ')
+            if (e.KeyValue == ' ')
             {
 
-                pannelBoxVogel.Location = new Point(pannelBoxVogel.Location.X, pannelBoxVogel.Location.Y - 50);
+                pannelBoxVogel.Location = new Point(pannelBoxVogel.Location.X, pannelBoxVogel.Location.Y - 75);
             }
         }
-
+        private void externalMethode()
+        {
+            try
+            {
+                while (true)
+                {
+                    vogelMethode();
+                    hindernissMethode();
+                    Thread.Sleep(65);
+                }
+            }
+            catch
+            {
+                Environment.Exit(0);
+            }
+        }
         private void vogelMethode()
         {
-            while (true)
+            
+            int fallenAbschlussCode = vogelFallen();
+            switch (fallenAbschlussCode)
             {
-                int fallenAbschlussCode = vogelFallen();
-                switch (fallenAbschlussCode) 
-                {
-                    case 0:
-                        break;
-                    case 1:
-                        Console.WriteLine("Fehlercode 1: Falscher Thread beim invoken!");
-                        break;
-
-
-
-                }
-                     
-                Thread.Sleep(10);
-                
+                case 0:
+                    break;
+                case 1:
+                    Console.WriteLine("Fehlercode 1: Falscher Thread beim invoken!");
+                    break;
             }
+
+
+            
 
         }
 
@@ -69,16 +77,17 @@ namespace FlappyBird
         private int vogelFallen()
         {
             PictureBox vogel = pannelBoxVogel;
-            //if(vogel.Location.Y = 936)
-            //{
-            //    ControllerGame.spielerLebt == false
-            //}
-            if(ControllerGame.spielerLebt == true) 
+            if (ControllerGame.spielerLebt == true)
             {
                 if (vogel.InvokeRequired)
                 {
-                    vogel.Invoke(new Action(() => {
-                        vogel.Location = new Point(vogel.Location.X, vogel.Location.Y + 5);
+                    vogel.Invoke(new Action(() =>
+                    {
+                        if (vogel.Location.Y == 939)
+                        {
+                            ControllerGame.spielerLebt = false;
+                        }
+                        vogel.Location = new Point(vogel.Location.X, vogel.Location.Y + 10);
                     }));
                     return 0;
                 }
@@ -92,46 +101,43 @@ namespace FlappyBird
         }
         private void hindernissMethode()
         {
-            while (true)
+            
+            switch (hindernissBewegen(pannelBoxRoehre2, pannelBoxRoehre4))
 
             {
-                switch (hindernissBewegen(panelRoehre1, pannelBoxRoehre2, pannelBoxRoehre4))
 
-                {
-                    
-                    case 0:
-                        break;
-                    case 1:
-                        Console.WriteLine("Fehlercode 1: Falscher Thread beim invoken!");
-                        break;
-                }
-                switch (hindernissBewegen(panelRoehre2, pannelBoxRoehre1, pannelBoxRoehre3))
-                {
-
-                    case 0:
-                        break;
-                    case 1:
-                        Console.WriteLine("Fehlercode 1: Falscher Thread beim invoken!");
-                        break;
-                }
-                Thread.Sleep(10);
+                case 0:
+                    break;
+                case 1:
+                    Console.WriteLine("Fehlercode 1: Falscher Thread beim invoken!");
+                    break;
             }
+            switch (hindernissBewegen(pannelBoxRoehre1, pannelBoxRoehre3))
+            {
+
+                case 0:
+                    break;
+                case 1:
+                    Console.WriteLine("Fehlercode 1: Falscher Thread beim invoken!");
+                    break;
+            }
+            
         }
-        private int hindernissBewegen(Panel p,PictureBox roehre1, PictureBox roehre2)
+        private int hindernissBewegen(PictureBox roehre1, PictureBox roehre2)
         {
 
             if (ControllerGame.spielerLebt == true)
             {
-                if (p.InvokeRequired)
+                if (roehre1.InvokeRequired)
                 {
-                    p.Invoke(new Action(() => {
-                        p.Location = new Point(p.Location.X -5 , p.Location.Y );
+
+                    roehre1.Invoke(new Action(() =>
+                    {
+                        roehre1.Location = new Point(roehre1.Location.X - 10, roehre1.Location.Y);
                     }));
-                    roehre1.Invoke(new Action(() => {
-                        roehre1.Location = new Point(roehre1.Location.X -5 , roehre1.Location.Y );
-                    }));
-                    roehre2.Invoke(new Action(() => {
-                        roehre2.Location = new Point(roehre2.Location.X -5 , roehre2.Location.Y );
+                    roehre2.Invoke(new Action(() =>
+                    {
+                        roehre2.Location = new Point(roehre2.Location.X - 10, roehre2.Location.Y);
                     }));
                     return 0;
                 }
@@ -142,8 +148,8 @@ namespace FlappyBird
             }
             return 0;
         }
-       
-            
+
+
 
     }
 }

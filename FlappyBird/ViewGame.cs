@@ -44,14 +44,18 @@ namespace FlappyBird
             while (true)
             {
                 int fallenAbschlussCode = vogelFallen();
-                if(fallenAbschlussCode == 0)
+                switch (fallenAbschlussCode) 
                 {
-                    //gut
+                    case 0:
+                        break;
+                    case 1:
+                        Console.WriteLine("Fehlercode 1: Falscher Thread beim invoken!");
+                        break;
+
+
+
                 }
-                else
-                {
-                    //nicht gut
-                }
+                     
                 Thread.Sleep(10);
                 
             }
@@ -62,19 +66,26 @@ namespace FlappyBird
         private int vogelFallen()
         {
             PictureBox vogel = pannelBoxVogel;
-            if (vogel.InvokeRequired)
+            
+            if(ControllerGame.spielerLebt == true) 
             {
-                vogel.Invoke(new Action(() => {
-                    vogel.Location = new Point(vogel.Location.X, vogel.Location.Y + 5);
-                }));
-                return 0;
+                if (vogel.InvokeRequired)
+                {
+                    vogel.Invoke(new Action(() => {
+                        vogel.Location = new Point(vogel.Location.X, vogel.Location.Y + 5);
+                    }));
+                    return 0;
+                }
+                else
+                {
+                    return 1;
+                }
             }
-            else
-            {
-                return 1;
-            }
+            return 0;
 
         }
+       
+            
 
     }
 }

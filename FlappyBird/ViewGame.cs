@@ -87,6 +87,10 @@ namespace FlappyBird
                         {
                             ControllerGame.spielerLebt = false;
                         }
+                        if (vogel.Location.Y <= 0)
+                        {
+                            ControllerGame.spielerLebt = false;
+                        }
                         vogel.Location = new Point(vogel.Location.X, vogel.Location.Y + 10);
                     }));
                     return 0;

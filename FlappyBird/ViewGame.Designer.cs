@@ -104,6 +104,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewGame";
             this.Text = "ViewGame";
+            this.Click += new System.EventHandler(this.ViewGame_Click);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ViewGame_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre3)).EndInit();

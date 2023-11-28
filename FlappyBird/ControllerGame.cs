@@ -16,11 +16,11 @@ namespace FlappyBird
 
         public static int ueberpruefenVonRoehren(PictureBox roehre1, PictureBox roehre2)
         {
-            if(roehre1.Location.X <= 0)
+            if(roehre1.Location.X <= -120)
             {
                 return 5;
             }
-            if(roehre2.Location.X <= 0)
+            if(roehre2.Location.X <= -120)
             {
                 return 6;
             }

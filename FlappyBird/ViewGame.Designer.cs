@@ -44,7 +44,7 @@
             // 
             this.pannelBoxRoehre1.BackColor = System.Drawing.Color.Transparent;
             this.pannelBoxRoehre1.Image = global::FlappyBird.Properties.Resources.Roehre1;
-            this.pannelBoxRoehre1.Location = new System.Drawing.Point(579, 591);
+            this.pannelBoxRoehre1.Location = new System.Drawing.Point(748, 591);
             this.pannelBoxRoehre1.Name = "pannelBoxRoehre1";
             this.pannelBoxRoehre1.Size = new System.Drawing.Size(119, 353);
             this.pannelBoxRoehre1.TabIndex = 0;
@@ -64,7 +64,7 @@
             // 
             this.pannelBoxRoehre3.BackColor = System.Drawing.Color.Transparent;
             this.pannelBoxRoehre3.Image = global::FlappyBird.Properties.Resources.RoehreGedreht;
-            this.pannelBoxRoehre3.Location = new System.Drawing.Point(578, -221);
+            this.pannelBoxRoehre3.Location = new System.Drawing.Point(748, -221);
             this.pannelBoxRoehre3.Name = "pannelBoxRoehre3";
             this.pannelBoxRoehre3.Size = new System.Drawing.Size(120, 598);
             this.pannelBoxRoehre3.TabIndex = 3;
@@ -117,10 +117,10 @@
 
         #endregion
 
-        private PictureBox pannelBoxRoehre1;
-        private PictureBox pannelBoxRoehre2;
-        private PictureBox pannelBoxRoehre3;
-        private PictureBox pannelBoxRoehre4;
-        private PictureBox pannelBoxVogel;
+        public PictureBox pannelBoxRoehre1;
+        public PictureBox pannelBoxRoehre2;
+        public PictureBox pannelBoxRoehre3;
+        public PictureBox pannelBoxRoehre4;
+        public PictureBox pannelBoxVogel;
     }
 }

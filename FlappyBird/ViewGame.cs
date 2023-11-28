@@ -45,6 +45,25 @@ namespace FlappyBird
             {
                 while (true)
                 {
+                    switch(ControllerGame.ueberpruefenVonRoehren(pannelBoxRoehre1, pannelBoxRoehre2))
+                    {
+                        case 5:
+                            pannelBoxRoehre1.Invoke(new Action(() =>
+                            {
+                                pannelBoxRoehre1.Location = new Point(730, pannelBoxRoehre1.Location.Y);
+                                pannelBoxRoehre3.Location = new Point(730, pannelBoxRoehre3.Location.Y);
+                            }));
+                            break;
+                        case 6:
+                            pannelBoxRoehre1.Invoke(new Action(() =>
+                            {
+                                pannelBoxRoehre2.Location = new Point(730, pannelBoxRoehre2.Location.Y);
+                                pannelBoxRoehre4.Location = new Point(730, pannelBoxRoehre4.Location.Y);
+                            }));
+                            break;
+                        case 0:
+                            break;
+                    }
                     vogelMethode();
                     hindernissMethode();
                     Thread.Sleep(65);

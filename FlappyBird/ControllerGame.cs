@@ -11,5 +11,21 @@ namespace FlappyBird
         internal static User userData;
         internal static bool spielerLebt = true;
 
+
+
+
+        public static int ueberpruefenVonRoehren(PictureBox roehre1, PictureBox roehre2)
+        {
+            if(roehre1.Location.X <= 0)
+            {
+                return 5;
+            }
+            if(roehre2.Location.X <= 0)
+            {
+                return 6;
+            }
+            return 0;
+            
+        }
     }
 }

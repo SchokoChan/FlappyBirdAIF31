@@ -50,15 +50,15 @@ namespace FlappyBird
                         case 5:
                             pannelBoxRoehre1.Invoke(new Action(() =>
                             {
-                                pannelBoxRoehre1.Location = new Point(730, pannelBoxRoehre1.Location.Y);
-                                pannelBoxRoehre3.Location = new Point(730, pannelBoxRoehre3.Location.Y);
+                                pannelBoxRoehre1.Location = new Point(730, ControllerGame.positionRoehren);
+                                pannelBoxRoehre3.Location = new Point(730, 1024 - ControllerGame.positionRoehren - 160);
                             }));
                             break;
                         case 6:
                             pannelBoxRoehre1.Invoke(new Action(() =>
                             {
-                                pannelBoxRoehre2.Location = new Point(730, pannelBoxRoehre2.Location.Y);
-                                pannelBoxRoehre4.Location = new Point(730, pannelBoxRoehre4.Location.Y);
+                                pannelBoxRoehre2.Location = new Point(730, ControllerGame.positionRoehren);
+                                pannelBoxRoehre4.Location = new Point(730, 1024 - ControllerGame.positionRoehren - 160);
                             }));
                             break;
                         case 0:

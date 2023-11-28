@@ -10,6 +10,7 @@ namespace FlappyBird
     {
         internal static User userData;
         internal static bool spielerLebt = true;
+        internal static int positionRoehren = -1;
 
 
 
@@ -18,10 +19,16 @@ namespace FlappyBird
         {
             if(roehre1.Location.X <= -120)
             {
+
+                Random random = new Random();
+                positionRoehren = random.Next(300, 901);
                 return 5;
             }
             if(roehre2.Location.X <= -120)
             {
+
+                Random random = new Random();
+                positionRoehren = random.Next(300, 901);
                 return 6;
             }
             return 0;

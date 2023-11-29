@@ -6,6 +6,8 @@ namespace FlappyBird
         public FormAnmeldeFormular()
         {
             InitializeComponent();
+            textBoxBenutzername.Text = "Admin";
+            textBoxPasswort.Text = "Passwort";
         }
 
         private void buttonRegistrieren_Click(object sender, EventArgs e)

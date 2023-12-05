@@ -44,7 +44,7 @@
             // 
             pannelBoxRoehre1.BackColor = Color.Transparent;
             pannelBoxRoehre1.Image = Properties.Resources.Roehre1;
-            pannelBoxRoehre1.Location = new Point(708, 481);
+            pannelBoxRoehre1.Location = new Point(708, 506);
             pannelBoxRoehre1.Name = "pannelBoxRoehre1";
             pannelBoxRoehre1.Size = new Size(119, 600);
             pannelBoxRoehre1.TabIndex = 0;
@@ -53,8 +53,9 @@
             // pannelBoxRoehre2
             // 
             pannelBoxRoehre2.BackColor = Color.Transparent;
+            pannelBoxRoehre2.BackgroundImageLayout = ImageLayout.None;
             pannelBoxRoehre2.Image = Properties.Resources.Roehre1;
-            pannelBoxRoehre2.Location = new Point(294, 528);
+            pannelBoxRoehre2.Location = new Point(299, 625);
             pannelBoxRoehre2.Name = "pannelBoxRoehre2";
             pannelBoxRoehre2.Size = new Size(120, 600);
             pannelBoxRoehre2.TabIndex = 1;
@@ -73,8 +74,9 @@
             // pannelBoxRoehre4
             // 
             pannelBoxRoehre4.BackColor = Color.Transparent;
+            pannelBoxRoehre4.BackgroundImageLayout = ImageLayout.None;
             pannelBoxRoehre4.Image = Properties.Resources.RoehreGedreht;
-            pannelBoxRoehre4.Location = new Point(294, -272);
+            pannelBoxRoehre4.Location = new Point(299, -200);
             pannelBoxRoehre4.Name = "pannelBoxRoehre4";
             pannelBoxRoehre4.Size = new Size(120, 600);
             pannelBoxRoehre4.TabIndex = 4;

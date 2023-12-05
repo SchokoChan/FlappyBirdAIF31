@@ -45,11 +45,11 @@ namespace FlappyBird
 
                 if (vogel.Location.Y >= 862)
                 {
-                    ControllerGame.spielerLebt = false;
+                    ViewGame.playerDeath();
                 }
                 if (vogel.Location.Y <= 0)
                 {
-                    ControllerGame.spielerLebt = false;
+                    ViewGame.playerDeath();
                 }
                 if (ControllerGame.spielerLebt == true)
                 {

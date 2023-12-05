@@ -12,12 +12,13 @@ namespace FlappyBird
 {
     public partial class ViewGame : Form
     {
-        private Button Button
+        
         public ViewGame()
         {
             InitializeComponent();
             Thread roeher = new Thread(ueberpruefungObFlappyBirdAnRoeherIst);
             roeher.Start();
+            
 
         }
 
@@ -150,7 +151,7 @@ namespace FlappyBird
             }
         }
 
-        private void playerDeath()
+        internal static void playerDeath()
         {
             ControllerGame.spielerLebt = false;
             ViewDeathScreen deathScreen = new ViewDeathScreen();

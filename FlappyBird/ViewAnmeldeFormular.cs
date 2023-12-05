@@ -76,5 +76,13 @@ namespace FlappyBird
             }
 
         }
+
+        private void pressingEnter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue == (char)Keys.Enter)
+            {
+                buttonAnmelden_Click(sender, null);
+            }
+        }
     }
 }

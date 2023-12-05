@@ -11,6 +11,8 @@ namespace FlappyBird
         internal static User userData;
         internal static bool spielerLebt = true;
         internal static int positionRoehren = -1;
+        internal static bool leertasteDruecken = true;
+        internal static int leertasteIterationen = 0;
         
 
 
@@ -35,6 +37,26 @@ namespace FlappyBird
             
         }
 
-        
+        public static void vogelFallen(PictureBox vogel)
+        {
+            if (ControllerGame.spielerLebt == true)
+            {
+
+
+                if (vogel.Location.Y >= 862)
+                {
+                    ControllerGame.spielerLebt = false;
+                }
+                if (vogel.Location.Y <= 0)
+                {
+                    ControllerGame.spielerLebt = false;
+                }
+                if (ControllerGame.spielerLebt == true)
+                {
+                    vogel.Location = new Point(vogel.Location.X, vogel.Location.Y + 10);
+                }
+            }
+        }
+
     }
 }

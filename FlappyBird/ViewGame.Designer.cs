@@ -28,11 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             pannelBoxRoehre1 = new PictureBox();
             pannelBoxRoehre2 = new PictureBox();
             pannelBoxRoehre3 = new PictureBox();
             pannelBoxRoehre4 = new PictureBox();
             pannelBoxVogel = new PictureBox();
+            timerRoehrenBewegen = new System.Windows.Forms.Timer(components);
+            timerRoehrenNeuGenerieren = new System.Windows.Forms.Timer(components);
+            timerKeyboardInput = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pannelBoxRoehre1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pannelBoxRoehre2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pannelBoxRoehre3).BeginInit();
@@ -92,6 +96,23 @@
             pannelBoxVogel.TabIndex = 5;
             pannelBoxVogel.TabStop = false;
             // 
+            // timerRoehrenBewegen
+            // 
+            timerRoehrenBewegen.Enabled = true;
+            timerRoehrenBewegen.Interval = 10;
+            timerRoehrenBewegen.Tick += timerRoehrenBewegen_Tick;
+            // 
+            // timerRoehrenNeuGenerieren
+            // 
+            timerRoehrenNeuGenerieren.Enabled = true;
+            timerRoehrenNeuGenerieren.Interval = 1;
+            timerRoehrenNeuGenerieren.Tick += timerRoehrenNeuGenerieren_Tick;
+            // 
+            // timerKeyboardInput
+            // 
+            timerKeyboardInput.Interval = 1;
+            timerKeyboardInput.Tick += timerKeyboardInput_Tick;
+            // 
             // ViewGame
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -106,7 +127,6 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "ViewGame";
             Text = "ViewGame";
-            Load += ViewGame_Load_1;
             Click += ViewGame_Click;
             KeyDown += ViewGame_KeyDown;
             ((System.ComponentModel.ISupportInitialize)pannelBoxRoehre1).EndInit();
@@ -124,5 +144,8 @@
         public PictureBox pannelBoxRoehre3;
         public PictureBox pannelBoxRoehre4;
         public PictureBox pannelBoxVogel;
+        private System.Windows.Forms.Timer timerRoehrenBewegen;
+        private System.Windows.Forms.Timer timerRoehrenNeuGenerieren;
+        private System.Windows.Forms.Timer timerKeyboardInput;
     }
 }

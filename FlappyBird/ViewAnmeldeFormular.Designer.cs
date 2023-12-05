@@ -1,6 +1,6 @@
 ﻿namespace FlappyBird
 {
-    partial class FormAnmeldeFormular
+    partial class ViewAnmeldeFormular
     {
         /// <summary>
         ///  Required designer variable.
@@ -100,7 +100,7 @@
             // 
             errorProvider.ContainerControl = this;
             // 
-            // FormAnmeldeFormular
+            // ViewAnmeldeFormular
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -112,7 +112,7 @@
             Controls.Add(textBoxBenutzername);
             Controls.Add(textBoxPasswort);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Name = "FormAnmeldeFormular";
+            Name = "ViewAnmeldeFormular";
             Text = "Login";
             ((System.ComponentModel.ISupportInitialize)errorProvider).EndInit();
             ResumeLayout(false);

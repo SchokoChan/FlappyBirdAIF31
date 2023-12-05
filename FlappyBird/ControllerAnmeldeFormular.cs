@@ -204,7 +204,6 @@ namespace FlappyBird
 
             }
 
-            throw new NotImplementedException();
         }
 
     }

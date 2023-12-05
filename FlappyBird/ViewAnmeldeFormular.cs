@@ -1,9 +1,9 @@
 namespace FlappyBird
 {
-    public partial class FormAnmeldeFormular : Form
+    public partial class ViewAnmeldeFormular : Form
     {
         public static Form gameOverview = new ViewGame();
-        public FormAnmeldeFormular()
+        public ViewAnmeldeFormular()
         {
             InitializeComponent();
             textBoxBenutzername.Text = "Admin";
@@ -54,7 +54,7 @@ namespace FlappyBird
             switch (abschlussCode)
             {
                 case 0:
-                    
+
                     gameOverview.Show();
                     break;
                 case 1:

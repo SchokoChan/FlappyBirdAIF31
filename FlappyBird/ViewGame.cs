@@ -16,6 +16,8 @@ namespace FlappyBird
         {
             InitializeComponent();
             Thread externalThread = new Thread(externalMethode);
+            Thread roeher = new Thread(ueberpruefungObFlappyBirdAnRoeherIst);
+            roeher.Start();
             externalThread.Start();
 
         }
@@ -45,20 +47,24 @@ namespace FlappyBird
             {
                 while (true)
                 {
-                    switch(ControllerGame.ueberpruefenVonRoehren(pannelBoxRoehre1, pannelBoxRoehre2))
+                    switch (ControllerGame.ueberpruefenVonRoehren(pannelBoxRoehre1, pannelBoxRoehre2))
                     {
                         case 5:
                             pannelBoxRoehre1.Invoke(new Action(() =>
                             {
-                                pannelBoxRoehre1.Location = new Point(730, ControllerGame.positionRoehren);
-                                pannelBoxRoehre3.Location = new Point(730, 1024 - ControllerGame.positionRoehren - 160);
+                                pannelBoxRoehre3.Location = new Point(730, ControllerGame.positionRoehren - 600);
+                                pannelBoxRoehre1.Location = new Point(730, pannelBoxRoehre3.Location.Y + 600 + 200);
+                                pannelBoxRoehre1.Refresh();
+                                pannelBoxRoehre3.Refresh();
                             }));
                             break;
                         case 6:
                             pannelBoxRoehre1.Invoke(new Action(() =>
                             {
-                                pannelBoxRoehre2.Location = new Point(730, ControllerGame.positionRoehren);
-                                pannelBoxRoehre4.Location = new Point(730, 1024 - ControllerGame.positionRoehren - 160);
+                                pannelBoxRoehre4.Location = new Point(730, -600 + ControllerGame.positionRoehren);
+                                pannelBoxRoehre2.Location = new Point(730, pannelBoxRoehre4.Location.Y + 600 + 200);
+                                pannelBoxRoehre2.Refresh();
+                                pannelBoxRoehre4.Refresh();
                             }));
                             break;
                         case 0:
@@ -76,7 +82,7 @@ namespace FlappyBird
         }
         private void vogelMethode()
         {
-            
+
             int fallenAbschlussCode = vogelFallen();
             switch (fallenAbschlussCode)
             {
@@ -88,7 +94,7 @@ namespace FlappyBird
             }
 
 
-            
+
 
         }
 
@@ -124,7 +130,7 @@ namespace FlappyBird
         }
         private void hindernissMethode()
         {
-            
+
             switch (hindernissBewegen(pannelBoxRoehre2, pannelBoxRoehre4))
 
             {
@@ -144,7 +150,7 @@ namespace FlappyBird
                     Console.WriteLine("Fehlercode 1: Falscher Thread beim invoken!");
                     break;
             }
-            
+
         }
         private int hindernissBewegen(PictureBox roehre1, PictureBox roehre2)
         {
@@ -173,6 +179,54 @@ namespace FlappyBird
         }
 
 
+        private void ueberpruefungObFlappyBirdAnRoeherIst()
+        {
+            while (true)
+            {
+                if (ControllerGame.spielerLebt == true)
+                {
+                    if (pannelBoxRoehre3.Location.X <= 100 + 70 && pannelBoxRoehre3.Location.X >= 30)
+                    {
+                        if (pannelBoxVogel.Location.Y <= pannelBoxRoehre3.Location.Y + 600)
+                        {
+                            ControllerGame.spielerLebt = false;
+                        }
+                    }
+                    if (pannelBoxRoehre1.Location.X <= 100 + 70 && pannelBoxRoehre1.Location.X >= 30)
+                    {
+                        if (pannelBoxVogel.Location.Y + 75 >= pannelBoxRoehre1.Location.Y)
+                        {
+                            ControllerGame.spielerLebt = false;
+                        }
+                    }
+                    if (pannelBoxRoehre4.Location.X <= 100 + 70 && pannelBoxRoehre4.Location.X >= 30)
+                    {
+                        if (pannelBoxVogel.Location.Y <= pannelBoxRoehre4.Location.Y + 600)
+                        {
+                            ControllerGame.spielerLebt = false;
+                        }
+                    }
+                    if (pannelBoxRoehre2.Location.X <= 100 + 70 && pannelBoxRoehre2.Location.X >= 30)
+                    {
+                        if (pannelBoxVogel.Location.Y + 75 >= pannelBoxRoehre2.Location.Y)
+                        {
+                            ControllerGame.spielerLebt = false;
+                        }
+                    }
 
+                }
+
+                {
+
+                }
+            }
+
+
+        }
+
+        private void ViewGame_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

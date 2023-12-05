@@ -150,7 +150,6 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "ViewGame";
             Text = "ViewGame";
-            Load += ViewGame_Load;
             Click += ViewGame_Click;
             KeyDown += ViewGame_KeyDown;
             ((System.ComponentModel.ISupportInitialize)pannelBoxRoehre1).EndInit();

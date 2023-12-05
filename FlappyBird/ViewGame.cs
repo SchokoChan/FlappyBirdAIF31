@@ -178,9 +178,6 @@ namespace FlappyBird
         }
 
 
-        private void ViewGame_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

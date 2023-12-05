@@ -22,7 +22,6 @@ namespace FlappyBird
                 case 0:
                     Form registierBestaetigung = new ViewRegistrierBestaetigung();
                     registierBestaetigung.Show();
-                    //Einfügen von Bestätigung der Registrierung 
                     break;
                 case 1:
                     errorProvider.SetError(buttonRegistrieren, "Datenbank verbindung konnte nicht Aufgebaut werden!");

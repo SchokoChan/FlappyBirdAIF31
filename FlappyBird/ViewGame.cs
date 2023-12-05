@@ -12,13 +12,13 @@ namespace FlappyBird
 {
     public partial class ViewGame : Form
     {
-        
+
         public ViewGame()
         {
             InitializeComponent();
             Thread roeher = new Thread(ueberpruefungObFlappyBirdAnRoeherIst);
             roeher.Start();
-            
+
 
         }
 
@@ -32,23 +32,25 @@ namespace FlappyBird
             if (e.KeyValue == ' ')
             {
 
-                if(ControllerGame.leertasteDruecken && ControllerGame.spielerLebt)
+                if (ControllerGame.leertasteDruecken && ControllerGame.spielerLebt)
                 {
                     pannelBoxVogel.Location = new Point(pannelBoxVogel.Location.X, pannelBoxVogel.Location.Y - 75);
-                    
+
                 }
                 if (!ControllerGame.spielerLebt)
                 {
-                    pannelBoxRoehre1.Location = new Point(708, 506);
-                    pannelBoxRoehre2.Location = new Point(299, 625);
-                    pannelBoxRoehre3.Location = new Point(708, -319);
-                    pannelBoxRoehre4.Location = new Point(299, -200);
+
+                    pannelBoxRoehre1.Location = new Point(700, 506);
+                    pannelBoxRoehre2.Location = new Point(300, 625);
+                    pannelBoxRoehre3.Location = new Point(700, -319);
+                    pannelBoxRoehre4.Location = new Point(300, -200);
                     pannelBoxVogel.Location = new Point(100, 400);
+                    ControllerGame.score = 0;
                     ControllerGame.spielerLebt = true;
                 }
             }
         }
-   
+
 
 
         private void ueberpruefungObFlappyBirdAnRoeherIst()
@@ -63,6 +65,7 @@ namespace FlappyBird
                         {
                             playerDeath();
                         }
+
                     }
                     if (pannelBoxRoehre1.Location.X <= 100 + 70 && pannelBoxRoehre1.Location.X >= 30)
                     {
@@ -81,7 +84,7 @@ namespace FlappyBird
                     if (pannelBoxRoehre2.Location.X <= 100 + 70 && pannelBoxRoehre2.Location.X >= 30)
                     {
                         if (pannelBoxVogel.Location.Y + 75 >= pannelBoxRoehre2.Location.Y)
-                        {   
+                        {
                             playerDeath();
                         }
                     }
@@ -105,8 +108,14 @@ namespace FlappyBird
                 pannelBoxRoehre3.Location = new Point(pannelBoxRoehre3.Location.X - 10, pannelBoxRoehre3.Location.Y);
                 pannelBoxRoehre4.Location = new Point(pannelBoxRoehre4.Location.X - 10, pannelBoxRoehre4.Location.Y);
                 ControllerGame.vogelFallen(pannelBoxVogel);
+                if (pannelBoxRoehre1.Location.X == 100 || pannelBoxRoehre2.Location.X == 100)
+                {
+                    ControllerGame.score += 1;
+                    labelScore.Text = "Score : " + ControllerGame.score;
+                }
+
             }
-           
+
         }
 
         private void timerRoehrenNeuGenerieren_Tick(object sender, EventArgs e)
@@ -137,16 +146,21 @@ namespace FlappyBird
 
         private void timerKeyboardInput_Tick(object sender, EventArgs e)
         {
-            if(ControllerGame.leertasteDruecken == false)
+
+            if (ControllerGame.leertasteDruecken == false)
             {
-                if(ControllerGame.leertasteIterationen == 50)
+                if (ControllerGame.leertasteIterationen == 50)
                 {
                     ControllerGame.leertasteDruecken = true;
+                    ControllerGame.leertasteIterationen = 0;
                 }
                 else
                 {
                     ControllerGame.leertasteIterationen += 1;
                 }
+
+
+
 
             }
         }
@@ -154,10 +168,19 @@ namespace FlappyBird
         internal static void playerDeath()
         {
             ControllerGame.spielerLebt = false;
+            if (ControllerGame.score > ControllerGame.userData.Highscore)
+            {
+                //APPLAUS NEUER HIGHSCORE (Einfügen, Danke<3)
+                ControllerGame.changeScore();
+            }
             ViewDeathScreen deathScreen = new ViewDeathScreen();
             deathScreen.ShowDialog();
-            
-            
+        }
+
+
+        private void ViewGame_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

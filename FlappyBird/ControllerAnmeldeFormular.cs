@@ -164,15 +164,20 @@ namespace FlappyBird
                 {
                     return 50;
                 }
-                mySqlCommandString = "Select PasswortSalt,PasswortHash from User where Username ='"+benutzername+"';";
+                mySqlCommandString = "Select PasswortSalt,PasswortHash,Highscore,Coins from User where Username ='"+benutzername+"';";
+                int score= -1, coins = -1;
                 try
                 {
+                    
                     using(MySqlCommand cmd = new MySqlCommand(mySqlCommandString, conn))
                     {
                         using(MySqlDataReader reader = cmd.ExecuteReader())
                         {
                             if (reader.Read())
                             {
+
+                                coins = Convert.ToInt32(reader["Coins"].ToString());
+                                score = Convert.ToInt32(reader["Highscore"].ToString());
                                 userSalt = reader["PasswortSalt"].ToString();
                                 userHashPasswort = reader["PasswortHash"].ToString();
                             }
@@ -190,7 +195,8 @@ namespace FlappyBird
 
                 if(hashPasswort(passwort,userSalt) == userHashPasswort)
                 {
-                    //User muss noch Übergeben werden ans Game Form
+                    User user = new User(benutzername,score,coins);
+                    ControllerGame.userData = user;
                     return 0;
                 }
                 else

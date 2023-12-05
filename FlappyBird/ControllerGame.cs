@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,8 @@ namespace FlappyBird
         internal static int positionRoehren = -1;
         internal static bool leertasteDruecken = true;
         internal static int leertasteIterationen = 0;
-        
+        internal static int score;
+        private static string connectionString = "Server=localhost;Port=3306;Database=FlappyBird;Uid=root;Pwd=;";
 
 
         public static int ueberpruefenVonRoehren(PictureBox roehre1, PictureBox roehre2)
@@ -58,5 +60,20 @@ namespace FlappyBird
             }
         }
 
+        internal static void changeScore()
+        {
+            using(MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand("UPDATE User SET Highscore = " + score + " WHERE Username = '"+ userData.Benutzername+ "';");
+                    cmd.Connection = conn;
+                    cmd.ExecuteNonQuery();
+                }catch (Exception e)
+                {
+                }
+            }
+        }
     }
 }

@@ -33,6 +33,10 @@ namespace FlappyBird
                 if(ControllerGame.leertasteDruecken && ControllerGame.spielerLebt)
                 {
                     pannelBoxVogel.Location = new Point(pannelBoxVogel.Location.X, pannelBoxVogel.Location.Y - 75);
+                    pannelBoxRoehre1.Location = new Point();
+                    pannelBoxRoehre2.Location = new Point();
+                    pannelBoxRoehre3.Location = new Point();
+                    pannelBoxRoehre4.Location = new Point();
                 }
             }
         }

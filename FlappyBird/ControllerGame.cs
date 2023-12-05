@@ -15,7 +15,7 @@ namespace FlappyBird
         internal static bool leertasteDruecken = true;
         internal static int leertasteIterationen = 0;
         internal static int score;
-        private static string connectionString = "Server=localhost;Port=3306;Database=FlappyBird;Uid=root;Pwd=;";
+        private static string connectionString = "Server=localhost;Port=3306;Database=FlappyBird;Uid=root;Pwd=;";      
 
 
         public static int ueberpruefenVonRoehren(PictureBox roehre1, PictureBox roehre2)

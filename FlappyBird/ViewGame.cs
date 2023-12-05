@@ -19,6 +19,10 @@ namespace FlappyBird
             Thread roeher = new Thread(ueberpruefungObFlappyBirdAnRoeherIst);
             roeher.Start();
 
+            buttonNeustart.Hide();
+            buttonSchliessen.Hide();
+            labelGestorben.Hide();
+
 
         }
 
@@ -113,8 +117,10 @@ namespace FlappyBird
                     ControllerGame.score += 1;
                     labelScore.Text = "Score : " + ControllerGame.score;
                 }
+               
 
             }
+            
 
         }
 
@@ -173,11 +179,39 @@ namespace FlappyBird
                 //APPLAUS NEUER HIGHSCORE (Einfügen, Danke<3)
                 ControllerGame.changeScore();
             }
-            ViewDeathScreen deathScreen = new ViewDeathScreen();
-            deathScreen.ShowDialog();
+            
+             
+
+
+
         }
 
+        private void deathScreen()
+        {
+            ControllerGame.spielerLebt = false;
+            labelGestorben.Visible = true;
+            buttonNeustart.Visible = true;
+            buttonSchliessen.Visible = true;
+        }
 
-        
+        private void buttonNeustart_Click(object sender, EventArgs e)
+        {
+
+            pannelBoxRoehre1.Location = new Point(700, 506);
+            pannelBoxRoehre2.Location = new Point(300, 625);
+            pannelBoxRoehre3.Location = new Point(700, -319);
+            pannelBoxRoehre4.Location = new Point(300, -200);
+            pannelBoxVogel.Location = new Point(100, 400);
+            ControllerGame.score = 0;
+            ControllerGame.spielerLebt = true;
+            labelGestorben.Hide();
+            buttonNeustart.Hide();
+            buttonSchliessen.Hide();
+        }
+
+        private void buttonSchliessen_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

@@ -10,7 +10,7 @@ namespace FlappyBird
     public class ControllerGame
     {
         internal static User userData;
-        internal static bool spielerLebt = true;
+        internal static bool spielerLebt;
         internal static int positionRoehren = -1;
         internal static bool leertasteDruecken = true;
         internal static int leertasteIterationen = 0;

@@ -15,6 +15,8 @@ namespace FlappyBird
 
         public ViewGame()
         {
+
+            ControllerGame.spielerLebt = true;
             InitializeComponent();
             Thread roeher = new Thread(ueberpruefungObFlappyBirdAnRoeherIst);
             roeher.Start();

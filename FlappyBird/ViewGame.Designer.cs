@@ -36,12 +36,11 @@
             this.pannelBoxVogel = new System.Windows.Forms.PictureBox();
             this.timerRoehrenBewegen = new System.Windows.Forms.Timer(this.components);
             this.timerRoehrenNeuGenerieren = new System.Windows.Forms.Timer(this.components);
-            this.timerKeyboardInput = new System.Windows.Forms.Timer(this.components);
             this.labelScore = new System.Windows.Forms.Label();
-            this.splitter1 = new System.Windows.Forms.Splitter();
             this.labelGestorben = new System.Windows.Forms.Label();
             this.buttonNeustart = new System.Windows.Forms.Button();
             this.buttonSchliessen = new System.Windows.Forms.Button();
+            this.timerKeyboardInput = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre3)).BeginInit();
@@ -111,10 +110,6 @@
             this.timerRoehrenNeuGenerieren.Enabled = true;
             this.timerRoehrenNeuGenerieren.Interval = 1;
             // 
-            // timerKeyboardInput
-            // 
-            this.timerKeyboardInput.Interval = 1;
-            // 
             // labelScore
             // 
             this.labelScore.AutoSize = true;
@@ -126,14 +121,6 @@
             this.labelScore.TabIndex = 6;
             this.labelScore.Text = "Score : 0";
             // 
-            // splitter1
-            // 
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 1024);
-            this.splitter1.TabIndex = 7;
-            this.splitter1.TabStop = false;
-            // 
             // labelGestorben
             // 
             this.labelGestorben.AutoSize = true;
@@ -143,6 +130,7 @@
             this.labelGestorben.Location = new System.Drawing.Point(237, 332);
             this.labelGestorben.Name = "labelGestorben";
             this.labelGestorben.Size = new System.Drawing.Size(507, 68);
+            this.labelGestorben.TabIndex = 12;
             this.labelGestorben.Text = "Du bist gestorben!";
             // 
             // buttonNeustart
@@ -152,7 +140,8 @@
             this.buttonNeustart.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonNeustart.Location = new System.Drawing.Point(288, 447);
             this.buttonNeustart.Name = "buttonNeustart";
-            this.buttonNeustart.Size = new System.Drawing.Size(204, 73);           
+            this.buttonNeustart.Size = new System.Drawing.Size(204, 73);
+            this.buttonNeustart.TabIndex = 11;
             this.buttonNeustart.Text = "Neustart";
             this.buttonNeustart.UseVisualStyleBackColor = false;
             this.buttonNeustart.Click += new System.EventHandler(this.buttonNeustart_Click);
@@ -170,6 +159,11 @@
             this.buttonSchliessen.UseVisualStyleBackColor = false;
             this.buttonSchliessen.Click += new System.EventHandler(this.buttonSchliessen_Click);
             // 
+            // timerKeyboardInput
+            // 
+            this.timerKeyboardInput.Enabled = true;
+            this.timerKeyboardInput.Interval = 1;
+            // 
             // ViewGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -179,7 +173,6 @@
             this.Controls.Add(this.buttonSchliessen);
             this.Controls.Add(this.buttonNeustart);
             this.Controls.Add(this.labelGestorben);
-            this.Controls.Add(this.splitter1);
             this.Controls.Add(this.labelScore);
             this.Controls.Add(this.pannelBoxVogel);
             this.Controls.Add(this.pannelBoxRoehre1);
@@ -189,6 +182,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewGame";
             this.Text = "ViewGame";
+            this.Click += new System.EventHandler(this.ViewGame_Click);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ViewGame_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre3)).EndInit();
@@ -208,11 +203,10 @@
         public PictureBox pannelBoxVogel;
         private System.Windows.Forms.Timer timerRoehrenBewegen;
         private System.Windows.Forms.Timer timerRoehrenNeuGenerieren;
-        private System.Windows.Forms.Timer timerKeyboardInput;
         private Label labelScore;
-        private Splitter splitter1;
         private Label labelGestorben;
         private Button buttonNeustart;
         private Button buttonSchliessen;
+        private System.Windows.Forms.Timer timerKeyboardInput;
     }
 }

@@ -35,7 +35,7 @@ namespace FlappyBird
 
         private void ViewGame_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyValue == ' ')
+            if (e.KeyValue == (char)Keys.Space) 
             {
 
                 if (ControllerGame.leertasteDruecken && ControllerGame.spielerLebt)
@@ -43,17 +43,7 @@ namespace FlappyBird
                     pannelBoxVogel.Location = new Point(pannelBoxVogel.Location.X, pannelBoxVogel.Location.Y - 75);
 
                 }
-                if (!ControllerGame.spielerLebt)
-                {
-
-                    pannelBoxRoehre1.Location = new Point(700, 506);
-                    pannelBoxRoehre2.Location = new Point(300, 625);
-                    pannelBoxRoehre3.Location = new Point(700, -319);
-                    pannelBoxRoehre4.Location = new Point(300, -200);
-                    pannelBoxVogel.Location = new Point(100, 400);
-                    ControllerGame.score = 0;
-                    ControllerGame.spielerLebt = true;
-                }
+                               
             }
         }
 
@@ -70,6 +60,7 @@ namespace FlappyBird
                         if (pannelBoxVogel.Location.Y <= pannelBoxRoehre3.Location.Y + 600)
                         {
                             playerDeath();
+                            deathScreen();
                         }
 
                     }
@@ -78,6 +69,7 @@ namespace FlappyBird
                         if (pannelBoxVogel.Location.Y + 75 >= pannelBoxRoehre1.Location.Y)
                         {
                             playerDeath();
+                            deathScreen();
                         }
                     }
                     if (pannelBoxRoehre4.Location.X <= 100 + 70 && pannelBoxRoehre4.Location.X >= 30)
@@ -85,6 +77,7 @@ namespace FlappyBird
                         if (pannelBoxVogel.Location.Y <= pannelBoxRoehre4.Location.Y + 600)
                         {
                             playerDeath();
+                            deathScreen();
                         }
                     }
                     if (pannelBoxRoehre2.Location.X <= 100 + 70 && pannelBoxRoehre2.Location.X >= 30)
@@ -92,6 +85,7 @@ namespace FlappyBird
                         if (pannelBoxVogel.Location.Y + 75 >= pannelBoxRoehre2.Location.Y)
                         {
                             playerDeath();
+                            deathScreen();
                         }
                     }
 
@@ -191,10 +185,14 @@ namespace FlappyBird
 
         private void deathScreen()
         {
-            ControllerGame.spielerLebt = false;
-            labelGestorben.Visible = true;
-            buttonNeustart.Visible = true;
-            buttonSchliessen.Visible = true;
+            labelGestorben.Invoke(new Action(() => {
+                ControllerGame.spielerLebt = false;
+                labelGestorben.Visible = true;
+                buttonNeustart.Visible = true;
+                buttonSchliessen.Visible = true;
+            }
+            ));
+            
         }
 
         private void buttonNeustart_Click(object sender, EventArgs e)

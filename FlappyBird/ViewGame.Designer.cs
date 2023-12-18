@@ -104,11 +104,13 @@
             // 
             this.timerRoehrenBewegen.Enabled = true;
             this.timerRoehrenBewegen.Interval = 10;
+            this.timerRoehrenBewegen.Tick += new System.EventHandler(this.timerRoehrenBewegen_Tick);
             // 
             // timerRoehrenNeuGenerieren
             // 
             this.timerRoehrenNeuGenerieren.Enabled = true;
             this.timerRoehrenNeuGenerieren.Interval = 1;
+            this.timerRoehrenNeuGenerieren.Tick += new System.EventHandler(this.timerRoehrenNeuGenerieren_Tick);
             // 
             // labelScore
             // 
@@ -163,6 +165,7 @@
             // 
             this.timerKeyboardInput.Enabled = true;
             this.timerKeyboardInput.Interval = 1;
+            this.timerKeyboardInput.Tick += new System.EventHandler(this.timerKeyboardInput_Tick);
             // 
             // ViewGame
             // 

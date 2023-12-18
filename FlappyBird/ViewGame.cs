@@ -178,6 +178,7 @@ namespace FlappyBird
             ControllerGame.spielerLebt = false;
             if (ControllerGame.score > ControllerGame.userData.Highscore)
             {
+                ControllerGame.userData.Highscore = ControllerGame.score;
                 //APPLAUS NEUER HIGHSCORE (Einfügen, Danke<3)
                 ControllerGame.changeScore();
             }

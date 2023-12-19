@@ -166,10 +166,11 @@
             buttonSchliessen.ForeColor = SystemColors.ActiveCaptionText;
             buttonSchliessen.Location = new Point(513, 447);
             buttonSchliessen.Name = "buttonSchliessen";
-            buttonSchliessen.Size = new Size(204, 73); 
+            buttonSchliessen.Size = new Size(204, 73);
+            buttonSchliessen.TabIndex = 0;
             buttonSchliessen.Text = "Schließen";
             buttonSchliessen.UseVisualStyleBackColor = false;
-            buttonSchliessen.Click += buttonSchliessen_Click;
+            buttonSchliessen.Click += formSchliesen;
             // 
             // ViewGame
             // 
@@ -189,6 +190,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "ViewGame";
             Text = "ViewGame";
+            FormClosed += formSchliesen;
             Click += ViewGame_Click;
             KeyDown += ViewGame_KeyDown;
             ((System.ComponentModel.ISupportInitialize)pannelBoxRoehre1).EndInit();

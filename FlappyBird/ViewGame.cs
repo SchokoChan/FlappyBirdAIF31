@@ -200,7 +200,7 @@ namespace FlappyBird
         private void buttonNeustart_Click(object sender, EventArgs e)
         {
 
-           
+
             pannelBoxRoehre1.Location = new Point(700, 506);
             pannelBoxRoehre2.Location = new Point(300, 625);
             pannelBoxRoehre3.Location = new Point(700, -319);
@@ -212,15 +212,18 @@ namespace FlappyBird
             buttonSchliessen.Hide();
             buttonNeustart.Hide();
             Form.ActiveForm.Focus();
-            
-            
+
+
         }
 
-        private void buttonSchliessen_Click(object sender, EventArgs e)
+        private void formSchliesen(object sender, EventArgs e)
         {
             Environment.Exit(0);
         }
 
-
+        private void formSchliesen(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

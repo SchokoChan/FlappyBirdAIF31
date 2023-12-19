@@ -2,6 +2,9 @@ namespace FlappyBird
 {
     public partial class ViewAnmeldeFormular : Form
     {
+
+        ControllerAnmeldeFormular controller = new ControllerAnmeldeFormular();
+
         public static Form gameOverview = new ViewGame();
         public ViewAnmeldeFormular()
         {
@@ -13,65 +16,45 @@ namespace FlappyBird
         private void buttonRegistrieren_Click(object sender, EventArgs e)
         {
             errorProvider.Clear();
-            int abschlussCode = ControllerAnmeldeFormular.userRegistrierung(textBoxBenutzername.Text,
-                textBoxPasswort.Text);
-
-
-            switch (abschlussCode)
+            if(textBoxPasswort.Text.Length > 7)
             {
-                case 0:
+                if(controller.userRegistrierung(textBoxBenutzername.Text, textBoxPasswort.Text))
+                {
                     Form registierBestaetigung = new ViewRegistrierBestaetigung();
                     registierBestaetigung.Show();
-                    break;
-                case 1:
-                    errorProvider.SetError(buttonRegistrieren, "Datenbank verbindung konnte nicht Aufgebaut werden!");
-                    break;
-                case 2:
-                    errorProvider.SetError(textBoxBenutzername, "Der Benutzername ist Bereits vergeben!");
-                    break;
-                case 3:
-                    errorProvider.SetError(textBoxPasswort, "Passwort konnte nicht gehasht werden! Error Code:3");
-                    break;
-                case 4:
-                    errorProvider.SetError(buttonRegistrieren, "Datenbank eintrag wurde nicht erstellt! Error Code:4");
-                    break;
-                case 50:
-                    errorProvider.SetError(buttonRegistrieren, "Fehler Code: 50");
-                    break;
-                case 100:
-                    errorProvider.SetError(textBoxPasswort, "Das Passwort muss mindestents 8 zeichen lang sein!");
-                    break;
+                }
+                else
+                {
+                    errorProvider.SetError(buttonRegistrieren, "Fehler beim erstellen des Benutzers!");
+                }
             }
+            else
+            {
+                errorProvider.SetError(textBoxPasswort, "Das Passwort muss mindestents 8 zeichen lang sein!");
+            }
+
+
+            
 
         }
 
         private void buttonAnmelden_Click(object sender, EventArgs e)
         {
             errorProvider.Clear();
-            int abschlussCode = ControllerAnmeldeFormular.userAnmeldung(textBoxBenutzername.Text,
-                textBoxPasswort.Text);
-            switch (abschlussCode)
+            if (textBoxPasswort.Text.Length < 7)
             {
-                case 0:
-
+                errorProvider.SetError(textBoxPasswort, "Das Passwort muss mindestents 8 zeichen lang sein!");
+            }
+            else
+            {
+                if (controller.userAnmeldung(textBoxBenutzername.Text, textBoxPasswort.Text))
+                {
                     gameOverview.Show();
-                    break;
-                case 1:
-                    errorProvider.SetError(buttonAnmelden, "Datenbank verbindung konnte nicht Aufgebaut werden!");
-                    break;
-                case 5:
-                    errorProvider.SetError(buttonAnmelden, "Benutzername und Passwort stimmen nicht überein!");
-                    break;
-                case 6:
-                    errorProvider.SetError(buttonAnmelden, "Error Code: 6");
-                    break;
-                case 50:
-                    errorProvider.SetError(buttonAnmelden, "Error Code: 50");
-                    break;
-                case 200:
-                    errorProvider.SetError(buttonAnmelden, "Error Code: 200");
-                    break;
-
+                }
+                else
+                {
+                    errorProvider.SetError(buttonAnmelden, "Anmeldung ist fehlgeschlagen!");
+                }
             }
 
         }

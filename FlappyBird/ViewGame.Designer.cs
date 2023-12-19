@@ -28,173 +28,177 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.pannelBoxRoehre1 = new System.Windows.Forms.PictureBox();
-            this.pannelBoxRoehre2 = new System.Windows.Forms.PictureBox();
-            this.pannelBoxRoehre3 = new System.Windows.Forms.PictureBox();
-            this.pannelBoxRoehre4 = new System.Windows.Forms.PictureBox();
-            this.pannelBoxVogel = new System.Windows.Forms.PictureBox();
-            this.timerRoehrenBewegen = new System.Windows.Forms.Timer(this.components);
-            this.timerRoehrenNeuGenerieren = new System.Windows.Forms.Timer(this.components);
-            this.labelScore = new System.Windows.Forms.Label();
-            this.labelGestorben = new System.Windows.Forms.Label();
-            this.buttonNeustart = new System.Windows.Forms.Button();
-            this.buttonSchliessen = new System.Windows.Forms.Button();
-            this.timerKeyboardInput = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pannelBoxVogel)).BeginInit();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            pannelBoxRoehre1 = new PictureBox();
+            pannelBoxRoehre2 = new PictureBox();
+            pannelBoxRoehre3 = new PictureBox();
+            pannelBoxRoehre4 = new PictureBox();
+            pannelBoxVogel = new PictureBox();
+            timerRoehrenBewegen = new System.Windows.Forms.Timer(components);
+            timerRoehrenNeuGenerieren = new System.Windows.Forms.Timer(components);
+            labelScore = new Label();
+            labelGestorben = new Label();
+            buttonNeustart = new Button();
+            buttonSchliessen = new Button();
+            timerKeyboardInput = new System.Windows.Forms.Timer(components);
+            ((System.ComponentModel.ISupportInitialize)pannelBoxRoehre1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pannelBoxRoehre2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pannelBoxRoehre3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pannelBoxRoehre4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pannelBoxVogel).BeginInit();
+            SuspendLayout();
             // 
             // pannelBoxRoehre1
             // 
-            this.pannelBoxRoehre1.BackColor = System.Drawing.Color.Transparent;
-            this.pannelBoxRoehre1.Image = global::FlappyBird.Properties.Resources.Roehre1;
-            this.pannelBoxRoehre1.Location = new System.Drawing.Point(700, 506);
-            this.pannelBoxRoehre1.Name = "pannelBoxRoehre1";
-            this.pannelBoxRoehre1.Size = new System.Drawing.Size(119, 600);
-            this.pannelBoxRoehre1.TabIndex = 0;
-            this.pannelBoxRoehre1.TabStop = false;
+            pannelBoxRoehre1.BackColor = Color.Transparent;
+            pannelBoxRoehre1.Image = Properties.Resources.Roehre1;
+            pannelBoxRoehre1.Location = new Point(700, 506);
+            pannelBoxRoehre1.Name = "pannelBoxRoehre1";
+            pannelBoxRoehre1.Size = new Size(119, 600);
+            pannelBoxRoehre1.TabIndex = 0;
+            pannelBoxRoehre1.TabStop = false;
+            pannelBoxRoehre1.Click += ViewGame_Click;
             // 
             // pannelBoxRoehre2
             // 
-            this.pannelBoxRoehre2.BackColor = System.Drawing.Color.Transparent;
-            this.pannelBoxRoehre2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pannelBoxRoehre2.Image = global::FlappyBird.Properties.Resources.Roehre1;
-            this.pannelBoxRoehre2.Location = new System.Drawing.Point(300, 625);
-            this.pannelBoxRoehre2.Name = "pannelBoxRoehre2";
-            this.pannelBoxRoehre2.Size = new System.Drawing.Size(120, 600);
-            this.pannelBoxRoehre2.TabIndex = 1;
-            this.pannelBoxRoehre2.TabStop = false;
+            pannelBoxRoehre2.BackColor = Color.Transparent;
+            pannelBoxRoehre2.BackgroundImageLayout = ImageLayout.None;
+            pannelBoxRoehre2.Image = Properties.Resources.Roehre1;
+            pannelBoxRoehre2.Location = new Point(300, 625);
+            pannelBoxRoehre2.Name = "pannelBoxRoehre2";
+            pannelBoxRoehre2.Size = new Size(120, 600);
+            pannelBoxRoehre2.TabIndex = 1;
+            pannelBoxRoehre2.TabStop = false;
+            pannelBoxRoehre2.Click += ViewGame_Click;
             // 
             // pannelBoxRoehre3
             // 
-            this.pannelBoxRoehre3.BackColor = System.Drawing.Color.Transparent;
-            this.pannelBoxRoehre3.Image = global::FlappyBird.Properties.Resources.RoehreGedreht;
-            this.pannelBoxRoehre3.Location = new System.Drawing.Point(700, -319);
-            this.pannelBoxRoehre3.Name = "pannelBoxRoehre3";
-            this.pannelBoxRoehre3.Size = new System.Drawing.Size(120, 600);
-            this.pannelBoxRoehre3.TabIndex = 3;
-            this.pannelBoxRoehre3.TabStop = false;
+            pannelBoxRoehre3.BackColor = Color.Transparent;
+            pannelBoxRoehre3.Image = Properties.Resources.RoehreGedreht;
+            pannelBoxRoehre3.Location = new Point(700, -319);
+            pannelBoxRoehre3.Name = "pannelBoxRoehre3";
+            pannelBoxRoehre3.Size = new Size(120, 600);
+            pannelBoxRoehre3.TabIndex = 3;
+            pannelBoxRoehre3.TabStop = false;
+            pannelBoxRoehre3.Click += ViewGame_Click;
             // 
             // pannelBoxRoehre4
             // 
-            this.pannelBoxRoehre4.BackColor = System.Drawing.Color.Transparent;
-            this.pannelBoxRoehre4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pannelBoxRoehre4.Image = global::FlappyBird.Properties.Resources.RoehreGedreht;
-            this.pannelBoxRoehre4.Location = new System.Drawing.Point(300, -200);
-            this.pannelBoxRoehre4.Name = "pannelBoxRoehre4";
-            this.pannelBoxRoehre4.Size = new System.Drawing.Size(120, 600);
-            this.pannelBoxRoehre4.TabIndex = 4;
-            this.pannelBoxRoehre4.TabStop = false;
+            pannelBoxRoehre4.BackColor = Color.Transparent;
+            pannelBoxRoehre4.BackgroundImageLayout = ImageLayout.None;
+            pannelBoxRoehre4.Image = Properties.Resources.RoehreGedreht;
+            pannelBoxRoehre4.Location = new Point(300, -200);
+            pannelBoxRoehre4.Name = "pannelBoxRoehre4";
+            pannelBoxRoehre4.Size = new Size(120, 600);
+            pannelBoxRoehre4.TabIndex = 4;
+            pannelBoxRoehre4.TabStop = false;
+            pannelBoxRoehre4.Click += ViewGame_Click;
             // 
             // pannelBoxVogel
             // 
-            this.pannelBoxVogel.BackColor = System.Drawing.Color.Transparent;
-            this.pannelBoxVogel.Image = global::FlappyBird.Properties.Resources.vogel_icon;
-            this.pannelBoxVogel.Location = new System.Drawing.Point(100, 400);
-            this.pannelBoxVogel.Name = "pannelBoxVogel";
-            this.pannelBoxVogel.Size = new System.Drawing.Size(100, 75);
-            this.pannelBoxVogel.TabIndex = 5;
-            this.pannelBoxVogel.TabStop = false;
+            pannelBoxVogel.BackColor = Color.Transparent;
+            pannelBoxVogel.Image = Properties.Resources.vogel_icon;
+            pannelBoxVogel.Location = new Point(100, 400);
+            pannelBoxVogel.Name = "pannelBoxVogel";
+            pannelBoxVogel.Size = new Size(100, 75);
+            pannelBoxVogel.TabIndex = 5;
+            pannelBoxVogel.TabStop = false;
+            pannelBoxVogel.Click += ViewGame_Click;
             // 
             // timerRoehrenBewegen
             // 
-            this.timerRoehrenBewegen.Enabled = true;
-            this.timerRoehrenBewegen.Interval = 10;
-            this.timerRoehrenBewegen.Tick += new System.EventHandler(this.timerRoehrenBewegen_Tick);
+            timerRoehrenBewegen.Enabled = true;
+            timerRoehrenBewegen.Interval = 10;
+            timerRoehrenBewegen.Tick += timerRoehrenBewegen_Tick;
             // 
             // timerRoehrenNeuGenerieren
             // 
-            this.timerRoehrenNeuGenerieren.Enabled = true;
-            this.timerRoehrenNeuGenerieren.Interval = 1;
-            this.timerRoehrenNeuGenerieren.Tick += new System.EventHandler(this.timerRoehrenNeuGenerieren_Tick);
+            timerRoehrenNeuGenerieren.Enabled = true;
+            timerRoehrenNeuGenerieren.Interval = 1;
+            timerRoehrenNeuGenerieren.Tick += timerRoehrenNeuGenerieren_Tick;
             // 
             // labelScore
             // 
-            this.labelScore.AutoSize = true;
-            this.labelScore.BackColor = System.Drawing.Color.Transparent;
-            this.labelScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelScore.Location = new System.Drawing.Point(331, 9);
-            this.labelScore.Name = "labelScore";
-            this.labelScore.Size = new System.Drawing.Size(131, 31);
-            this.labelScore.TabIndex = 6;
-            this.labelScore.Text = "Score : 0";
+            labelScore.AutoSize = true;
+            labelScore.BackColor = Color.Transparent;
+            labelScore.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelScore.Location = new Point(331, 9);
+            labelScore.Name = "labelScore";
+            labelScore.Size = new Size(131, 31);
+            labelScore.TabIndex = 6;
+            labelScore.Text = "Score : 0";
             // 
             // labelGestorben
             // 
-            this.labelGestorben.AutoSize = true;
-            this.labelGestorben.BackColor = System.Drawing.Color.Transparent;
-            this.labelGestorben.Font = new System.Drawing.Font("Arial Black", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelGestorben.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelGestorben.Location = new System.Drawing.Point(237, 332);
-            this.labelGestorben.Name = "labelGestorben";
-            this.labelGestorben.Size = new System.Drawing.Size(507, 68);
-            this.labelGestorben.TabIndex = 12;
-            this.labelGestorben.Text = "Du bist gestorben!";
+            labelGestorben.AutoSize = true;
+            labelGestorben.BackColor = Color.Transparent;
+            labelGestorben.Font = new Font("Arial Black", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            labelGestorben.ImageAlign = ContentAlignment.MiddleLeft;
+            labelGestorben.Location = new Point(237, 332);
+            labelGestorben.Name = "labelGestorben";
+            labelGestorben.Size = new Size(507, 68);
+            labelGestorben.TabIndex = 12;
+            labelGestorben.Text = "Du bist gestorben!";
             // 
             // buttonNeustart
             // 
-            this.buttonNeustart.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonNeustart.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonNeustart.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonNeustart.Location = new System.Drawing.Point(288, 447);
-            this.buttonNeustart.Name = "buttonNeustart";
-            this.buttonNeustart.Size = new System.Drawing.Size(204, 73);
-            this.buttonNeustart.TabIndex = 11;
-            this.buttonNeustart.Text = "Neustart";
-            this.buttonNeustart.UseVisualStyleBackColor = false;
-            this.buttonNeustart.Click += new System.EventHandler(this.buttonNeustart_Click);
+            buttonNeustart.BackColor = SystemColors.ButtonFace;
+            buttonNeustart.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonNeustart.ForeColor = SystemColors.ActiveCaptionText;
+            buttonNeustart.Location = new Point(288, 447);
+            buttonNeustart.Name = "buttonNeustart";
+            buttonNeustart.Size = new Size(204, 73);
+            buttonNeustart.TabIndex = 11;
+            buttonNeustart.Text = "Neustart";
+            buttonNeustart.UseVisualStyleBackColor = false;
+            buttonNeustart.Click += buttonNeustart_Click;
             // 
             // buttonSchliessen
             // 
-            this.buttonSchliessen.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonSchliessen.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonSchliessen.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonSchliessen.Location = new System.Drawing.Point(513, 447);
-            this.buttonSchliessen.Name = "buttonSchliessen";
-            this.buttonSchliessen.Size = new System.Drawing.Size(204, 73);
-            this.buttonSchliessen.TabIndex = 10;
-            this.buttonSchliessen.Text = "Schließen";
-            this.buttonSchliessen.UseVisualStyleBackColor = false;
-            this.buttonSchliessen.Click += new System.EventHandler(this.buttonSchliessen_Click);
+            buttonSchliessen.BackColor = SystemColors.ButtonFace;
+            buttonSchliessen.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonSchliessen.ForeColor = SystemColors.ActiveCaptionText;
+            buttonSchliessen.Location = new Point(513, 447);
+            buttonSchliessen.Name = "buttonSchliessen";
+            buttonSchliessen.Size = new Size(204, 73);
+            buttonSchliessen.TabIndex = 10;
+            buttonSchliessen.Text = "Schließen";
+            buttonSchliessen.UseVisualStyleBackColor = false;
+            buttonSchliessen.Click += buttonSchliessen_Click;
             // 
             // timerKeyboardInput
             // 
-            this.timerKeyboardInput.Enabled = true;
-            this.timerKeyboardInput.Interval = 1;
-            this.timerKeyboardInput.Tick += new System.EventHandler(this.timerKeyboardInput_Tick);
+            timerKeyboardInput.Enabled = true;
+            timerKeyboardInput.Interval = 1;
+            timerKeyboardInput.Tick += timerKeyboardInput_Tick;
             // 
             // ViewGame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::FlappyBird.Properties.Resources.Hintergrund;
-            this.ClientSize = new System.Drawing.Size(850, 1024);
-            this.Controls.Add(this.buttonSchliessen);
-            this.Controls.Add(this.buttonNeustart);
-            this.Controls.Add(this.labelGestorben);
-            this.Controls.Add(this.labelScore);
-            this.Controls.Add(this.pannelBoxVogel);
-            this.Controls.Add(this.pannelBoxRoehre1);
-            this.Controls.Add(this.pannelBoxRoehre3);
-            this.Controls.Add(this.pannelBoxRoehre2);
-            this.Controls.Add(this.pannelBoxRoehre4);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ViewGame";
-            this.Text = "ViewGame";
-            this.Click += new System.EventHandler(this.ViewGame_Click);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ViewGame_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pannelBoxRoehre4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pannelBoxVogel)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.Hintergrund;
+            ClientSize = new Size(850, 1024);
+            Controls.Add(buttonSchliessen);
+            Controls.Add(buttonNeustart);
+            Controls.Add(labelGestorben);
+            Controls.Add(labelScore);
+            Controls.Add(pannelBoxVogel);
+            Controls.Add(pannelBoxRoehre1);
+            Controls.Add(pannelBoxRoehre3);
+            Controls.Add(pannelBoxRoehre2);
+            Controls.Add(pannelBoxRoehre4);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "ViewGame";
+            Text = "ViewGame";
+            Click += ViewGame_Click;
+            KeyDown += ViewGame_KeyDown;
+            ((System.ComponentModel.ISupportInitialize)pannelBoxRoehre1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pannelBoxRoehre2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pannelBoxRoehre3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pannelBoxRoehre4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pannelBoxVogel).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

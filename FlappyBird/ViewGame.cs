@@ -207,6 +207,7 @@ namespace FlappyBird
             pannelBoxRoehre4.Location = new Point(300, -200);
             pannelBoxVogel.Location = new Point(100, 400);
             ControllerGame.score = 0;
+            labelScore.Text = "Score : 0";
             ControllerGame.spielerLebt = true;
             labelGestorben.Hide();
             buttonSchliessen.Hide();

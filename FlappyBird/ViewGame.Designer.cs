@@ -39,8 +39,8 @@
             labelScore = new Label();
             labelGestorben = new Label();
             buttonNeustart = new Button();
-            buttonSchliessen = new Button();
             timerKeyboardInput = new System.Windows.Forms.Timer(components);
+            buttonSchliessen = new Button();
             ((System.ComponentModel.ISupportInitialize)pannelBoxRoehre1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pannelBoxRoehre2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pannelBoxRoehre3).BeginInit();
@@ -153,6 +153,12 @@
             buttonNeustart.UseVisualStyleBackColor = false;
             buttonNeustart.Click += buttonNeustart_Click;
             // 
+            // timerKeyboardInput
+            // 
+            timerKeyboardInput.Enabled = true;
+            timerKeyboardInput.Interval = 1;
+            timerKeyboardInput.Tick += timerKeyboardInput_Tick;
+            // 
             // buttonSchliessen
             // 
             buttonSchliessen.BackColor = SystemColors.ButtonFace;
@@ -160,17 +166,10 @@
             buttonSchliessen.ForeColor = SystemColors.ActiveCaptionText;
             buttonSchliessen.Location = new Point(513, 447);
             buttonSchliessen.Name = "buttonSchliessen";
-            buttonSchliessen.Size = new Size(204, 73);
-            buttonSchliessen.TabIndex = 10;
+            buttonSchliessen.Size = new Size(204, 73); 
             buttonSchliessen.Text = "Schließen";
             buttonSchliessen.UseVisualStyleBackColor = false;
             buttonSchliessen.Click += buttonSchliessen_Click;
-            // 
-            // timerKeyboardInput
-            // 
-            timerKeyboardInput.Enabled = true;
-            timerKeyboardInput.Interval = 1;
-            timerKeyboardInput.Tick += timerKeyboardInput_Tick;
             // 
             // ViewGame
             // 
@@ -213,7 +212,7 @@
         private Label labelScore;
         private Label labelGestorben;
         private Button buttonNeustart;
-        private Button buttonSchliessen;
         private System.Windows.Forms.Timer timerKeyboardInput;
+        private Button buttonSchliessen;
     }
 }

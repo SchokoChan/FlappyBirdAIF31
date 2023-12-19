@@ -35,6 +35,12 @@ namespace FlappyBird
 
         private void ViewGame_KeyDown(object sender, KeyEventArgs e)
         {
+
+            if (!ControllerGame.spielerLebt)
+            {
+                buttonNeustart_Click(sender, e);
+            }
+
             if (e.KeyValue == (char)Keys.Space)
             {
 
@@ -88,10 +94,6 @@ namespace FlappyBird
                             deathScreen();
                         }
                     }
-
-                }
-
-                {
 
                 }
             }
@@ -187,7 +189,6 @@ namespace FlappyBird
         {
             labelGestorben.Invoke(new Action(() =>
             {
-                ControllerGame.spielerLebt = false;
                 labelGestorben.Visible = true;
                 buttonNeustart.Visible = true;
                 buttonSchliessen.Visible = true;
@@ -199,6 +200,7 @@ namespace FlappyBird
         private void buttonNeustart_Click(object sender, EventArgs e)
         {
 
+           
             pannelBoxRoehre1.Location = new Point(700, 506);
             pannelBoxRoehre2.Location = new Point(300, 625);
             pannelBoxRoehre3.Location = new Point(700, -319);
@@ -207,8 +209,11 @@ namespace FlappyBird
             ControllerGame.score = 0;
             ControllerGame.spielerLebt = true;
             labelGestorben.Hide();
-            buttonNeustart.Hide();
             buttonSchliessen.Hide();
+            buttonNeustart.Hide();
+            Form.ActiveForm.Focus();
+            
+            
         }
 
         private void buttonSchliessen_Click(object sender, EventArgs e)

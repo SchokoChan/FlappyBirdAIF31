@@ -10,7 +10,7 @@ namespace FlappyBird
         [STAThread]
         static void Main()
         {
-            bool unitTest = true;
+            bool unitTest = false;
 
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>130</y>
+      <w>210</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>ViewAnmeldeFormular
+--
+-buttonAnmelden_Click:void
+-buttonRegistrieren:Click:void
+#Dispose:void
+-InitializerComponent:void
+-pressingEnter:void
++ViewAnmeldeFormular
+--
+-buttonAnmelden:Button
+-buttonRegistrieren:Button
+-conponents:IContainer
+-errorProvider:ErrorProvider
++gameOverview:Form
+-labelBenutzername:label
+-labelPasswort:label
+-textboxBenutzername:TextBox
+-textBoxPasswort:TextBox</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>130</y>
+      <w>210</w>
+      <h>450</h>
+    </coordinates>
+    <panel_attributes>ViewGame
+--
+-buttonNeustart:Button
+--buttonSchlissen:Button
+-components:Icontainer
+-labelGestorben:label
+-labelScore:label
+-pannelBoxRoehre1:PictureBox
+-pannelBoxRoehre2:PictureBox
+-pannelBoxRoehre3:PictureBox
+-pannelBoxRoehre4:PictureBox
++pannelBoxVogel:PictureBox
++timerKeyboardinput:Timer
+-timerRoehrenBewegen:Timer
+-timerRoehrenNeuGenerieren:Timer
+--
+-buttonNeustart_Click:void
+-buttonSchliessen_Click:void
+-deathScreen:void
+#Dispose:void
+-InitializeComponent:void
+?playerDeath:void
+-timerkeyboardInput_tick:void
+-timerKeyRoehrenBewegen_Tick:void
+-timerRoehrenNeugenerieren:void
+-ueberpruefungObFlappyBirdAnRoehrIst:void
++ViewGame
+:ViewGame_Click:void
+-ViewGame_KeyDown:void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>130</y>
+      <w>210</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>User
+--
++User
+--
+-benutzername:string
+-coins:int
+-highscore:int </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>880</x>
+      <y>130</y>
+      <w>210</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Program
+--
+-Main:void
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1100</x>
+      <y>130</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>ModelAnmeldeFormular
+--
+
+--
+-connectionString:string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1320</x>
+      <y>130</y>
+      <w>210</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>ControllerGame
+--
+#changeScore:void
++ueberprüfenVonRoehren:int
++vogelFallen:void
+--
+-connectionString:string
+#leerstateDruecken:bool
+#leertasteIterationen:int
+#positionRoehren:int
+#score:int
+#spielerLebt:bool
+#userData:user</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1540</x>
+      <y>130</y>
+      <w>210</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>ControllerAnmeldeFormular
+--
+-generiereSalt:string
+-hashPasswort:string
++userAnmeldung:int
++userRegistrierung:int
+--
+-connectionString:string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>130</y>
+      <w>210</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>ViewRegestrierBesteatigung
+--
+-ButtonClose:Button
+-components:IContainer
+-label1:Label
+--
+-buttonClose_Click:void
+#Dispose:void
+-initializerCompoent:void
++ViewRegistrierBesteatigung
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
